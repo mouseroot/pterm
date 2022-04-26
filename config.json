@@ -1,0 +1,24 @@
+{
+    "window": {
+        "width": 1024,
+        "height": 768,
+        "text_size": 14,
+        "text_color": "white",
+        "background": "black",
+        "title": "Config Title"
+    },
+    "output": {
+        "width": 700,
+        "height": 300
+    },
+    "history": {
+        "enabled": true,
+        "width": 500,
+        "height": 200,
+        "save_file": ".phistory"
+    },
+    "cursor": {
+        "width": 5,
+        "blink_rate": 0.5
+    }
+}
