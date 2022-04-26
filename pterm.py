@@ -112,7 +112,7 @@ while game_running:
                     break
                 else:
                     #other command
-                    output_line = subprocess.check_output(input_line.split(" ")).decode("utf-8")
+                    
                     if history_config["enabled"]:
                         history.append(input_line.replace('\n',''))
                         write_history()
@@ -157,6 +157,7 @@ while game_running:
 
     text_img = font.render(input_line, True, pygame.Color(window_config["text_color"]))
     rect = text_img.get_rect()
+    pygame.draw.rect(screen, pygame.Color("gray"),pygame.Rect(10,WINDOW_SIZE[1]-50,500,15))
     screen.blit(text_img, pygame.Rect(10,WINDOW_SIZE[1]-50,WINDOW_SIZE[0],500))
     if time.time() % 1 > cursor_config["blink_rate"]:
         pygame.draw.rect(screen, pygame.Color("red"),pygame.Rect(rect.x + rect.width + 10, WINDOW_SIZE[1]-50, cursor_config["width"],15))
